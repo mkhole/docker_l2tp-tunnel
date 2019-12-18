@@ -12,6 +12,7 @@ ENV_USER_LIST=user,user;test,test;
 docker run \
     --name l2tp-tunnel \
     --env-file ./env.file \
+    -p 1701:1701/udp \
     -d --privileged \
     mkhole/l2tp-tunnel
 
